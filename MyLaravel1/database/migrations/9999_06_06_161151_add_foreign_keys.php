@@ -36,7 +36,7 @@ class AddForeignKeys extends Migration
      * @return void
      */
     public function down()
-    {   
+    {
         Schema::disableForeignKeyConstraints(); //per evitare di commentare le funzioni down ogni volta
 
         Schema::table('cars', function (Blueprint $table){

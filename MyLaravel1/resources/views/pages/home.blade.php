@@ -17,10 +17,13 @@
                     id
                 </th>
                 <th>
-                    name
+                    model
                 </th>
                 <th>
                     kw
+                </th>
+                <th>
+                    brand
                 </th>
                 <th>
                     edit
@@ -43,6 +46,9 @@
                     </td>
                     <td>
                         {{$car -> kW}}
+                    </td>
+                    <td>
+                        {{$car -> brand -> name}}
                     </td>
                     <td>
                         <a href="{{route('edit', $car -> id)}}">

@@ -11033,18 +11033,43 @@ body {
   background-color: lightblue;
 }
 
-body div#container header,
+body div#container header #login {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding-right: 50px;
+}
+
+body div#container header #login ul {
+  list-style: none;
+}
+
+body div#container header #login ul li {
+  display: inline-block;
+}
+
+body div#container header #login ul li a {
+  padding-right: 20px;
+}
+
+body div#container header h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: orange;
+  margin-top: 50px;
+}
+
 body div#container footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-}
-
-body div#container header h1 {
-  text-transform: uppercase;
-  color: orange;
 }
 
 body div#container footer h3 {

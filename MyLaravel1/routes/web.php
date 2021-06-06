@@ -13,22 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/car-list', 'HomeController@carList') -> name('car-list');
+Route::get('/', 'HomeController@home')->name('home');
 
 Route::get('/details{id}', 'HomeController@detailsCar') -> name('details');
 
-Route::get('/newCar', 'HomeController@newCar') -> name('newCar');
-Route::post('/store', 'HomeController@store') -> name('store');
+Route::get('/newCar', 'LoggedController@newCar') -> name('newCar');
+Route::post('/store', 'LoggedController@store') -> name('store');
 
-Route::get('/edit/{id}', 'HomeController@edit') -> name('edit');
-Route::post('/update/{id}', 'HomeController@update') -> name('update');
+Route::get('/edit/{id}', 'LoggedController@edit') -> name('edit');
+Route::post('/update/{id}', 'LoggedController@update') -> name('update');
 
-Route::get('/destroy/{id}', 'HomeController@destroy') -> name('destroy');
+Route::get('/destroy/{id}', 'LoggedController@destroy') -> name('destroy');
