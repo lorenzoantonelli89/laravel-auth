@@ -10,11 +10,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div id="container">
-        @include('components.header')
-        @yield('content')
-        @include('components.footer')
+    <div id="app">
+        <div id="container">
+            @include('components.header')
+            @yield('content')
+            @include('components.footer')
+        </div>
     </div>
-   
 </body>
 </html>

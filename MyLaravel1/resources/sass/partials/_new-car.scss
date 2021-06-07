@@ -8,11 +8,17 @@ div#container{
                 text-align: center;
                 margin: 20px 0;
             }
-            
-            input{
-                padding: 15px 45px;
-            }
 
+            div.container-input{
+                text-align: center;
+
+                input{
+                    padding: 15px 45px;
+                }
+                #image{
+                    padding: 0 0;
+                }
+            }
             div#submit{
                 text-align: center;
                 margin-top: 30px;

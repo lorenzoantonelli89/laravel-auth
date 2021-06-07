@@ -9,7 +9,7 @@
             add new car
         </h1>
         
-        <form method="POST" action="{{route('store')}}">
+        <form method="POST" action="{{route('store')}}" enctype="multipart/form-data">
 
             @csrf
             @method('POST')
@@ -19,7 +19,9 @@
                         Model
                     </label>
                 </div>
-                <input type="text" name="model" require>
+                <div class="container-input">
+                    <input type="text" name="model" require>
+                </div>
             </div>
             <div>
                 <div class="container-label">
@@ -27,7 +29,9 @@
                         kW
                     </label>
                 </div>
-                <input type="number" name="kW" require>
+                <div class="container-input">
+                    <input type="number" name="kW" require>
+                </div>
             </div>
             <div>
                 <div class="container-label">
@@ -35,16 +39,28 @@
                         Brand
                     </label>
                 </div>
-                <select name="brand_id" id="brand_id" require>
-                    <option selected disabled>
-                        Select Brand
-                    </option>
-                    @foreach ($brands as $brand)
-                        <option value="{{$brand -> id}}">
-                            {{$brand -> name}}
+                <div class="container-input">
+                    <select name="brand_id" id="brand_id" require>
+                        <option selected disabled>
+                            Select Brand
                         </option>
-                    @endforeach
-                </select>
+                        @foreach ($brands as $brand)
+                            <option value="{{$brand -> id}}">
+                                {{$brand -> name}}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="container-label">
+                    <label for="image">
+                        Image
+                    </label>
+                </div>
+                <div class="container-input">
+                    <input id="image" type="file" name="image" require>
+                </div>  
             </div>
             <div>
                 <ul id="container-pilot">

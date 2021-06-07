@@ -19,6 +19,7 @@ class CreateCarsTable extends Migration
             $table->integer('kW');
             $table->boolean('delete') -> default(false);
             $table->bigInteger('brand_id') -> unsigned() -> index();
+            $table->string('image') -> default('null');
             $table->timestamps();
         });
     }

@@ -11011,8 +11011,16 @@ div#container main form div.container-label {
   margin: 20px 0;
 }
 
-div#container main form input {
+div#container main form div.container-input {
+  text-align: center;
+}
+
+div#container main form div.container-input input {
   padding: 15px 45px;
+}
+
+div#container main form div.container-input #image {
+  padding: 0 0;
 }
 
 div#container main form div#submit {
